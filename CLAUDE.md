@@ -25,7 +25,7 @@ libraries beyond React.
 - `src/lib/supabase/{client,server,env}.ts`: Supabase clients; create the browser client inside effects or handlers, never at module scope
 - `src/lib/links.ts`: pure link helpers (source detection, place-name parsing, host allowlist). Keep it free of framework imports so it stays unit-testable
 - `src/app/api/link-preview/route.ts`: server-side link resolver
-- `supabase/migrations/`: SQL, applied by hand in the Supabase SQL Editor. Add new numbered files (`0002_...sql`); never edit an applied one
+- `supabase/migrations/`: SQL for the live Supabase project "Date Ideas" (ref `taiiyjyaxiugtdscjycq`, eu-west-1). `0001` and `0002` are already applied. Add new numbered files (`0003_...sql`) and apply them with the Supabase MCP server from `.mcp.json` (or the dashboard SQL Editor); never edit an applied one. After schema changes, check the Supabase security advisors for missing RLS or exposed functions
 
 ## Rules that matter
 
